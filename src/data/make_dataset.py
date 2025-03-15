@@ -173,11 +173,11 @@ def merge_datasets(df_users, df_veh, df_places, df_caract):
     #df[col_to_replace0_na] = df[col_to_replace0_na].replace(0, np.nan)
     #return df
 
-#def drop_columns(df):
+def drop_columns(df):
     # Drop columns
- #   list_to_drop = ['senc','larrout','actp', 'manv', 'choc', 'nbv', 'prof', 'plan', 'Num_Acc', 'id_vehicule', 'num_veh', 'pr', 'pr1','voie', 'trajet',"secu2", "secu3",'adr', 'v1', 'lartpc','occutc','v2','vosp','locp','etatp', 'infra', 'obs' ]
-  #  df.drop(list_to_drop, axis=1, inplace=True)
-   # return df
+    list_to_drop = ['senc','larrout','actp', 'manv', 'choc', 'nbv', 'prof', 'plan', 'Num_Acc', 'id_vehicule', 'num_veh', 'pr', 'pr1','voie', 'trajet',"secu2", "secu3",'adr', 'v1', 'lartpc','occutc','v2','vosp','locp','etatp', 'infra', 'obs' ]
+    df.drop(list_to_drop, axis=1, inplace=True)
+    return df
 
 def drop_lines_with_nan_values(df):
     # Drop lines with NaN values
