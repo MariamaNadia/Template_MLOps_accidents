@@ -152,18 +152,18 @@ def merge_datasets(df_users, df_veh, df_places, df_caract):
     df = fusion2.merge(df_caract, on='Num_Acc', how="left")
     return df
 
-def add_new_columns(df, nb_victim, nb_vehicules):
+#def add_new_columns(df, nb_victim, nb_vehicules):
     # Add new columns
-    df = df.merge(nb_victim, on="Num_Acc", how="inner")
-    df.rename({"count": "nb_victim"}, axis=1, inplace=True)
-    df = df.merge(nb_vehicules, on="Num_Acc", how="inner")
-    df.rename({"count": "nb_vehicules"}, axis=1, inplace=True)
-    return df
+    #df = df.merge(nb_victim, on="Num_Acc", how="inner")
+    #df.rename({"count": "nb_victim"}, axis=1, inplace=True)
+    #df = df.merge(nb_vehicules, on="Num_Acc", how="inner")
+    #df.rename({"count": "nb_vehicules"}, axis=1, inplace=True)
+    #return df
 
-def modif_target_variable(df):
+#def modif_target_variable(df):
     # Modify target variable
-    df['grav'].replace([2, 3, 4], [0, 1, 1], inplace=True)
-    return df
+    #df['grav'].replace([2, 3, 4], [0, 1, 1], inplace=True)
+    #return df
 
 def replace_values(df):
     # Replace values -1 and 0
